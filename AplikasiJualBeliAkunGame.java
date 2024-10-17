@@ -142,6 +142,25 @@ public class AplikasiJualBeliAkunGame {
             System.out.println("Nomor akun tidak valid.");
         }
     }
+    static void editAkunGame(Scanner input) {
+        daftarAkunGame();
+        System.out.print("Pilih nomor akun game yang akan diedit: ");
+        int index = input.nextInt() - 1;
+        input.nextLine(); // Konsumsi newline
+        if (index >= 0 && index < daftarAkunGame.size()) {
+            System.out.print("Masukkan nama game baru: ");
+            String namaGame = input.nextLine();
+            System.out.print("Masukkan deskripsi baru: ");
+            String deskripsi = input.nextLine();
+            AkunGame akun = daftarAkunGame.get(index);
+            akun.namaGame = namaGame;
+            akun.deskripsi = deskripsi;
+            System.out.println("Akun game berhasil diupdate.");
+        } else {
+            System.out.println("Nomor akun tidak valid.");
+        }
+    }
+
 
 
 
