@@ -174,6 +174,23 @@ public class AplikasiJualBeliAkunGame {
         }
     }
 
+    static void cariAkunGame(Scanner input) {
+        System.out.print("Masukkan nama game yang ingin dicari: ");
+        String namaGame = input.nextLine();
+
+        boolean found = false;
+        for (AkunGame akun : daftarAkunGame) {
+            if (akun.namaGame.equalsIgnoreCase(namaGame) && !akun.terjual) {
+                System.out.println("Nama Game: " + akun.namaGame + " | Deskripsi: " + akun.deskripsi);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Akun game tidak ditemukan.");
+        }
+    }
+
 
 
 
