@@ -131,6 +131,19 @@ public class AplikasiJualBeliAkunGame {
         System.out.println("Akun game berhasil ditambahkan!");
     }
 
+    static void hapusAkunGame(Scanner input) {
+        daftarAkunGame();
+        System.out.print("Pilih nomor akun game yang akan dihapus: ");
+        int index = input.nextInt() - 1;
+        if (index >= 0 && index < daftarAkunGame.size()) {
+            daftarAkunGame.remove(index);
+            System.out.println("Akun game berhasil dihapus.");
+        } else {
+            System.out.println("Nomor akun tidak valid.");
+        }
+    }
+
+
 
 
 
