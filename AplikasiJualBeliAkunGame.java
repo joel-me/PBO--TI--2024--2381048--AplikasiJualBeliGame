@@ -121,6 +121,18 @@ public class AplikasiJualBeliAkunGame {
         }
         System.out.println("Username atau password salah!");
     }
+    static void daftarAkunGame() {
+        if (daftarAkunGame.isEmpty()) {
+            System.out.println("Tidak ada akun game yang tersedia.");
+        } else {
+            for (int i = 0; i < daftarAkunGame.size(); i++) {
+                AkunGame akun = daftarAkunGame.get(i);
+                if (!akun.terjual) {
+                    System.out.println((i + 1) + ". Nama Game: " + akun.namaGame + " | Deskripsi: " + akun.deskripsi);
+                }
+            }
+        }
+    }
 
 
 
