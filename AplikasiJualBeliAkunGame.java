@@ -54,3 +54,46 @@ public class AplikasiJualBeliAkunGame {
                     default:
                         System.out.println("Pilihan tidak valid!");
                 }
+            } else {
+                System.out.println("\n1. Tambah Akun Game");
+                System.out.println("2. Hapus Akun Game");
+                System.out.println("3. Edit Akun Game");
+                System.out.println("4. Daftar Akun Game");
+                System.out.println("5. Cari Akun Game");
+                System.out.println("6. Beli Akun Game");
+                System.out.println("7. Logout");
+                System.out.print("Pilih menu: ");
+                int pilihan = input.nextInt();
+                input.nextLine();
+
+                switch (pilihan) {
+                    case 1:
+                        tambahAkunGame(input);
+                        break;
+                    case 2:
+                        hapusAkunGame(input);
+                        break;
+                    case 3:
+                        editAkunGame(input);
+                        break;
+                    case 4:
+                        daftarAkunGame();
+                        break;
+                    case 5:
+                        cariAkunGame(input);
+                        break;
+                    case 6:
+                        beliAkunGame(input);
+                        break;
+                    case 7:
+                        penggunaAktif = null;
+                        System.out.println("Anda berhasil logout.");
+                        break;
+                    default:
+                        System.out.println("Pilihan tidak valid!");
+                }
+            }
+        }
+        input.close();
+    }
+
