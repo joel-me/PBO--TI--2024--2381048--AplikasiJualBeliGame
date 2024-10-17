@@ -96,6 +96,7 @@ public class AplikasiJualBeliAkunGame {
         }
         input.close();
     }
+
     static void registrasi(Scanner input) {
         System.out.print("Masukkan username: ");
         String username = input.nextLine();
@@ -121,6 +122,7 @@ public class AplikasiJualBeliAkunGame {
         }
         System.out.println("Username atau password salah!");
     }
+
     static void tambahAkunGame(Scanner input) {
         System.out.print("Masukkan nama game: ");
         String namaGame = input.nextLine();
@@ -142,6 +144,7 @@ public class AplikasiJualBeliAkunGame {
             System.out.println("Nomor akun tidak valid.");
         }
     }
+
     static void editAkunGame(Scanner input) {
         daftarAkunGame();
         System.out.print("Pilih nomor akun game yang akan diedit: ");
@@ -190,6 +193,20 @@ public class AplikasiJualBeliAkunGame {
             System.out.println("Akun game tidak ditemukan.");
         }
     }
+
+    static void beliAkunGame(Scanner input) {
+        daftarAkunGame();
+        System.out.print("Pilih nomor akun game yang akan dibeli: ");
+        int index = input.nextInt() - 1;
+        if (index >= 0 && index < daftarAkunGame.size()) {
+            AkunGame akun = daftarAkunGame.get(index);
+            akun.terjual = true;
+            System.out.println("Akun game " + akun.namaGame + " berhasil dibeli!");
+        } else {
+            System.out.println("Nomor akun tidak valid.");
+        }
+    }
+}
 
 
 
