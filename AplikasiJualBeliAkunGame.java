@@ -96,4 +96,15 @@ public class AplikasiJualBeliAkunGame {
         }
         input.close();
     }
+    static void registrasi(Scanner input) {
+        System.out.print("Masukkan username: ");
+        String username = input.nextLine();
+        System.out.print("Masukkan password: ");
+        String password = input.nextLine();
+
+        daftarPengguna.add(new Pengguna(username, password));
+        System.out.println("Registrasi berhasil!");
+    }
+
+
 
